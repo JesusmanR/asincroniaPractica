@@ -1,0 +1,12 @@
+{
+  "name": "asincronia-practica",
+  "version": "1.0.0",
+  "description": "Practica de asincronia en JavaScript consumiendo la API JSONPlaceholder (SENA - Tecnico en Programacion de Software - CIMI)",
+  "type": "module",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "author": "Jesus Manuel",
+  "license": "ISC"
+}
