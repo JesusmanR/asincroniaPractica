@@ -57,7 +57,7 @@ Practica/
 ## Estado de avance
 
 - [x] Estructura base del proyecto
-- [ ] Ejercicio 1 - Tareas pendientes por usuario
+- [x] Ejercicio 1 - Tareas pendientes por usuario
 - [ ] Ejercicio 2 - Usuario y albumes
 - [ ] Ejercicio 3 - Filtrar posts
 - [ ] Ejercicio 4 - Nombre y telefono
