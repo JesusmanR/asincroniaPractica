@@ -2,3 +2,4 @@
 // app.js solo debe importar este archivo, nunca los modulos individuales.
 
 export { listarTareasPendientesPorUsuario } from './tareasPendientes.js';
+export { buscarUsuarioConAlbumes } from './usuarioYAlbumes.js';

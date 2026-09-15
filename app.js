@@ -14,7 +14,11 @@ const ejercicios = [
     nombre: 'Tareas pendientes por usuario',
     accion: ejerciciosDisponibles.listarTareasPendientesPorUsuario,
   },
-  { numero: '2', nombre: 'Buscar usuario y sus albumes', accion: null },
+  {
+    numero: '2',
+    nombre: 'Buscar usuario y sus albumes',
+    accion: ejerciciosDisponibles.buscarUsuarioConAlbumes,
+  },
   { numero: '3', nombre: 'Filtrar posts por nombre', accion: null },
   { numero: '4', nombre: 'Usuarios (nombre y telefono)', accion: null },
   { numero: '5', nombre: 'Usuarios enriquecidos (posts, comentarios, albumes, fotos)', accion: null },
@@ -53,7 +57,7 @@ async function main() {
     if (entrada === '0' || entrada.toLowerCase() === 'salir') {
       continuar = false;
       console.log('Hasta luego!');
-      continue; // termina esta vuelta del while sin ejecutar nada mas
+      continue;
     }
 
     const ejercicio = buscarEjercicio(entrada);
@@ -68,7 +72,7 @@ async function main() {
       continue;
     }
 
-    await ejercicio.accion(); // se espera a que termine el ejercicio antes de volver a mostrar el menu
+    await ejercicio.accion();
   }
 }
 
