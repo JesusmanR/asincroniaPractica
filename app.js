@@ -1,7 +1,13 @@
 // app.js: punto de entrada del programa.
-// Unico archivo propio que se importa aqui: el archivo barril de src/modules.
-import * as ejerciciosDisponibles from './src/modules/index.js';
-import { preguntar } from './src/utils/prompt.js';
+// Unico archivo importado aqui: el archivo barril de src/modules.
+import {
+  listarTareasPendientesPorUsuario,
+  buscarUsuarioConAlbumes,
+  filtrarPostsPorNombre,
+  obtenerNombresYTelefonos,
+  obtenerUsuariosEnriquecidos,
+  preguntar,
+} from './src/modules/index.js';
 
 /**
  * Catalogo de ejercicios: relaciona un numero y un nombre visible con la
@@ -9,31 +15,11 @@ import { preguntar } from './src/utils/prompt.js';
  * una entrada aqui (principio DRY: la logica del menu no se repite).
  */
 const ejercicios = [
-  {
-    numero: '1',
-    nombre: 'Tareas pendientes por usuario',
-    accion: ejerciciosDisponibles.listarTareasPendientesPorUsuario,
-  },
-  {
-    numero: '2',
-    nombre: 'Buscar usuario y sus albumes',
-    accion: ejerciciosDisponibles.buscarUsuarioConAlbumes,
-  },
-  {
-    numero: '3',
-    nombre: 'Filtrar posts por nombre',
-    accion: ejerciciosDisponibles.filtrarPostsPorNombre,
-  },
-  {
-    numero: '4',
-    nombre: 'Usuarios (nombre y telefono)',
-    accion: ejerciciosDisponibles.obtenerNombresYTelefonos,
-  },
-  {
-    numero: '5',
-    nombre: 'Usuarios enriquecidos (posts, comentarios, albumes, fotos)',
-    accion: ejerciciosDisponibles.obtenerUsuariosEnriquecidos,
-  },
+  { numero: '1', nombre: 'Tareas pendientes por usuario', accion: listarTareasPendientesPorUsuario },
+  { numero: '2', nombre: 'Buscar usuario y sus albumes', accion: buscarUsuarioConAlbumes },
+  { numero: '3', nombre: 'Filtrar posts por nombre', accion: filtrarPostsPorNombre },
+  { numero: '4', nombre: 'Usuarios (nombre y telefono)', accion: obtenerNombresYTelefonos },
+  { numero: '5', nombre: 'Usuarios enriquecidos (posts, comentarios, albumes, fotos)', accion: obtenerUsuariosEnriquecidos },
 ];
 
 // Muestra las opciones disponibles en la terminal.
@@ -76,11 +62,6 @@ async function main() {
 
     if (!ejercicio) {
       console.log('Opcion no reconocida, intenta de nuevo.');
-      continue;
-    }
-
-    if (!ejercicio.accion) {
-      console.log(`"${ejercicio.nombre}" todavia no esta implementado.`);
       continue;
     }
 
