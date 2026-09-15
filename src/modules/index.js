@@ -3,3 +3,4 @@
 
 export { listarTareasPendientesPorUsuario } from './tareasPendientes.js';
 export { buscarUsuarioConAlbumes } from './usuarioYAlbumes.js';
+export { filtrarPostsPorNombre } from './filtrarPostsPorNombre.js';
