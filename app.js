@@ -19,7 +19,11 @@ const ejercicios = [
     nombre: 'Buscar usuario y sus albumes',
     accion: ejerciciosDisponibles.buscarUsuarioConAlbumes,
   },
-  { numero: '3', nombre: 'Filtrar posts por nombre', accion: null },
+  {
+    numero: '3',
+    nombre: 'Filtrar posts por nombre',
+    accion: ejerciciosDisponibles.filtrarPostsPorNombre,
+  },
   { numero: '4', nombre: 'Usuarios (nombre y telefono)', accion: null },
   { numero: '5', nombre: 'Usuarios enriquecidos (posts, comentarios, albumes, fotos)', accion: null },
 ];
