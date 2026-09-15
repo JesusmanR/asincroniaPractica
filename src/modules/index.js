@@ -5,3 +5,4 @@ export { listarTareasPendientesPorUsuario } from './tareasPendientes.js';
 export { buscarUsuarioConAlbumes } from './usuarioYAlbumes.js';
 export { filtrarPostsPorNombre } from './filtrarPostsPorNombre.js';
 export { obtenerNombresYTelefonos } from './usuariosNombreTelefono.js';
+export { obtenerUsuariosEnriquecidos } from './usuariosEnriquecidos.js';
