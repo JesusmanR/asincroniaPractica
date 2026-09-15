@@ -60,5 +60,5 @@ Practica/
 - [x] Ejercicio 1 - Tareas pendientes por usuario
 - [x] Ejercicio 2 - Usuario y albumes
 - [x] Ejercicio 3 - Filtrar posts
-- [ ] Ejercicio 4 - Nombre y telefono
+- [x] Ejercicio 4 - Nombre y telefono
 - [ ] Ejercicio 5 - Usuarios enriquecidos

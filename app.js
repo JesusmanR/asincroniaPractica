@@ -24,7 +24,11 @@ const ejercicios = [
     nombre: 'Filtrar posts por nombre',
     accion: ejerciciosDisponibles.filtrarPostsPorNombre,
   },
-  { numero: '4', nombre: 'Usuarios (nombre y telefono)', accion: null },
+  {
+    numero: '4',
+    nombre: 'Usuarios (nombre y telefono)',
+    accion: ejerciciosDisponibles.obtenerNombresYTelefonos,
+  },
   { numero: '5', nombre: 'Usuarios enriquecidos (posts, comentarios, albumes, fotos)', accion: null },
 ];
 
