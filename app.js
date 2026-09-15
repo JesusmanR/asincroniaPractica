@@ -29,7 +29,11 @@ const ejercicios = [
     nombre: 'Usuarios (nombre y telefono)',
     accion: ejerciciosDisponibles.obtenerNombresYTelefonos,
   },
-  { numero: '5', nombre: 'Usuarios enriquecidos (posts, comentarios, albumes, fotos)', accion: null },
+  {
+    numero: '5',
+    nombre: 'Usuarios enriquecidos (posts, comentarios, albumes, fotos)',
+    accion: ejerciciosDisponibles.obtenerUsuariosEnriquecidos,
+  },
 ];
 
 // Muestra las opciones disponibles en la terminal.

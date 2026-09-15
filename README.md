@@ -61,4 +61,4 @@ Practica/
 - [x] Ejercicio 2 - Usuario y albumes
 - [x] Ejercicio 3 - Filtrar posts
 - [x] Ejercicio 4 - Nombre y telefono
-- [ ] Ejercicio 5 - Usuarios enriquecidos
+- [x] Ejercicio 5 - Usuarios enriquecidos
