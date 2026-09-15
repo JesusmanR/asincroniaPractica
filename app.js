@@ -1,7 +1,13 @@
 // app.js: punto de entrada del programa.
-// Unico archivo propio que se importa aqui: el archivo barril de src/modules.
-import * as ejerciciosDisponibles from './src/modules/index.js';
-import { preguntar } from './src/utils/prompt.js';
+// Unico archivo importado aqui: el archivo barril de src/modules.
+import {
+  listarTareasPendientesPorUsuario,
+  buscarUsuarioConAlbumes,
+  filtrarPostsPorNombre,
+  obtenerNombresYTelefonos,
+  obtenerUsuariosEnriquecidos,
+  preguntar,
+} from './src/modules/index.js';
 
 /**
  * Catalogo de ejercicios: relaciona un numero y un nombre visible con la
@@ -9,15 +15,11 @@ import { preguntar } from './src/utils/prompt.js';
  * una entrada aqui (principio DRY: la logica del menu no se repite).
  */
 const ejercicios = [
-  {
-    numero: '1',
-    nombre: 'Tareas pendientes por usuario',
-    accion: ejerciciosDisponibles.listarTareasPendientesPorUsuario,
-  },
-  { numero: '2', nombre: 'Buscar usuario y sus albumes', accion: null },
-  { numero: '3', nombre: 'Filtrar posts por nombre', accion: null },
-  { numero: '4', nombre: 'Usuarios (nombre y telefono)', accion: null },
-  { numero: '5', nombre: 'Usuarios enriquecidos (posts, comentarios, albumes, fotos)', accion: null },
+  { numero: '1', nombre: 'Tareas pendientes por usuario', accion: listarTareasPendientesPorUsuario },
+  { numero: '2', nombre: 'Buscar usuario y sus albumes', accion: buscarUsuarioConAlbumes },
+  { numero: '3', nombre: 'Filtrar posts por nombre', accion: filtrarPostsPorNombre },
+  { numero: '4', nombre: 'Usuarios (nombre y telefono)', accion: obtenerNombresYTelefonos },
+  { numero: '5', nombre: 'Usuarios enriquecidos (posts, comentarios, albumes, fotos)', accion: obtenerUsuariosEnriquecidos },
 ];
 
 // Muestra las opciones disponibles en la terminal.
@@ -53,7 +55,7 @@ async function main() {
     if (entrada === '0' || entrada.toLowerCase() === 'salir') {
       continuar = false;
       console.log('Hasta luego!');
-      continue; // termina esta vuelta del while sin ejecutar nada mas
+      continue;
     }
 
     const ejercicio = buscarEjercicio(entrada);
@@ -63,12 +65,7 @@ async function main() {
       continue;
     }
 
-    if (!ejercicio.accion) {
-      console.log(`"${ejercicio.nombre}" todavia no esta implementado.`);
-      continue;
-    }
-
-    await ejercicio.accion(); // se espera a que termine el ejercicio antes de volver a mostrar el menu
+    await ejercicio.accion();
   }
 }
 
